@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<header>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" href="css/style.css" />
+	</header>
+
+	<body> 
+		<div id="titleDiv">
+			<!-- Clicable title to Index -->
+			<a href="index.html"><img src="./img/title.png" alt="Project Alexandrie"/></a>
+			<hr />
+		</div>
+
+		<!-- Acces menu to all pages -->
+
+		<nav> 
+			<ul>
+				<li> 
+					<a href="searchW.html">Work search</a> 
+				</li>
+				<li>
+					<a href="panel.html">Panel</a>
+				</li>
+			</ul>
+		</nav>
+
+		<br />
+		<hr />
+		<br />
+
+		<div id="bodyDiv">
+
+			<!-- Form to search a Subscriber -->
+			<h2 id="pageName">Search Subscriber</h2>
+			<form method="POST" id="searchSubscriber">
+
+				<div class="form">
+					<label for="firstname">First Name : </label>
+					<input type="text" name="firstname" id="firstname" pattern="[a-zA-Z -]*">
+				</div>
+				
+				<div class="form">
+					<label for="lastname">Last Name : </label>
+					<input type="text" name="lastname" id="lastname" pattern="[a-zA-Z -]*">
+				</div>
+				
+				<div class="form">
+					<label for="email">E-mail adress : </label>
+					<input type="email" name="email" id="email" pattern="[a-zA-Z -]*">
+				</div>
+				
+				<div class="form">
+					<button>Search</button>
+				</div>
+			</form>
+
+			<!-- Display result -->
+			<div id="subList"></div>
+		</div>
+
+		<!-- Include JS scripts -->
+		<script src="../src/js/jquery.js"></script>
+		<script src="../src/js/searchS.js"></script>
+		<script src="../src/js/autofillSelect.js" type="text/javascript"></script>
+	</body>
+</html>

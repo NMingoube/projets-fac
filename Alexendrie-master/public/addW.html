@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<header>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" href="css/style.css" />
+	</header>
+
+	<body> 
+		<div id="titleDiv">
+			<!-- Clicable title to Index -->
+			<a href="index.html"><img src="./img/title.png" alt="Project Alexandrie"/></a>
+			<hr />
+		</div>
+
+		<!-- Acces menu to all pages -->
+
+		<nav> 
+			<ul>
+				<li> 
+					<a href="searchW.html">Work search</a> 
+				</li>
+				<li>
+					<a href="panel.html">Panel</a>
+				</li>
+			</ul>
+		</nav>
+
+		<br />
+		<hr />
+		<br />
+
+		<div id="bodyDiv">
+			<h2 id="pageName">Add Work</h2>
+
+			<!-- Form to add a book -->
+			<h3>Add Book</h3>
+			<form id="addBook">
+
+				<div class="form">
+					<label for="isbn">ISBN : </label>
+					<input type="text" name="isbn" id="bookIsbn"  pattern="[0-9]*" required>
+				</div>
+
+				<div class="form">
+					<label for="title">Title : </label>
+					<input type="text" name="title" id="bookTitle" pattern="[0-9a-zA-Z -]*" required>
+				</div>
+
+				<div class="form">
+					<label for="author">Author : </label>
+					<input type="text" name="author" id="bookAuthor" pattern="[a-zA-Z -]*" required>
+				</div>
+
+				<div class="form">
+					<label for="editor">Editor : </label>
+					<input type="text" name="editor" id="bookEditor" pattern="[a-zA-Z -]*" required>
+				</div>
+
+				<div class="form">
+					<label for="publish">Publish date : </label>
+					<input type="date" name="publish" id="bookPublish" required>
+				</div>
+				
+				<div class="form">
+					<label for="type">Choose a type : </label>
+					<select name="type" id="bookType">
+						<option value=""></option>
+					</select>
+				</div>
+				
+				<div class="form">
+					<label for="age">Minimum age required : </label>
+					<input type="number" name="age" id="bookAge" min=3 max=21 required>
+				</div>
+				
+				<div class="form">
+					<button type="submit">Add</button>
+				</div>
+
+			</form>
+
+			<!-- Form to add a DVD -->
+			<h3>Add DVD</h3>
+			<form id="addDVD">
+
+				<div class="form">
+					<label for="title">Title : </label>
+					<input type="text" name="title" id="dvdTitle" pattern="[0-9a-zA-Z -]*" required>
+				</div>				
+
+				<div class="form">
+					<label for="director">Director : </label>
+					<input type="text" name="director" id="dvdDirector" pattern="[a-zA-Z -]*" required>
+				</div>
+
+				<div class="form">
+					<label for="age">Age : </label>
+					<input type="number" name="age" id="dvdAge" min=3 max=21 required>
+				</div>
+				
+				<div class="form">
+					<label for="type">Choose a type : </label>
+					<select name="type" id="dvdType">
+						<option value=""></option>
+					</select>
+				</div>
+
+				<div class="form">
+					<label for="publish">Publish date : </label>
+					<input type="date" name="publish" id="dvdPublish" min="1970-01-01" required>
+				</div>
+
+				<div class="form">
+					<button type="submit">Add</button>
+				</div>
+
+			</form>
+
+			<!-- Form to add a Magazine -->
+			<h3>Add Magazine</h3>
+			<form id="addMagazine">
+
+				<div class="form">
+					<label for="title">Title : </label>
+					<input type="text" name="title" id="magazineTitle" pattern="[0-9a-zA-Z -]*" required>
+				</div>				
+
+				<div class="form">
+					<label for="number">Number : </label>
+					<input type="number" name="number" id="magazineNumber" min=1 required>
+				</div>
+				
+				<div class="form">
+					<label for="type">Choose a type : </label>
+					<select name="type" id="magazineType">
+						<option value=""></option>
+					</select>
+				</div>
+
+				<div class="form">
+					<label for="age">Age : </label>
+					<input type="number" name="age" id="magazineAge" min=3 max=21 required>
+				</div>
+
+				<div class="form">
+					<label for="editor">Editor : </label>
+					<input type="text" name="editor" id="magazineEditor" pattern="[a-zA-Z -]*" required>
+				</div>
+
+				<div class="form">
+					<label for="publish">Publish date : </label>
+					<input type="date" name="publish" id="magazinePublish" min="1900-01-01" required>
+				</div>
+				
+				<div class="form">
+					<label for="frequency">Choose a frequency : </label>
+					<select name="frequency" id="magazineFrequency">
+						<option value=""></option>
+					</select>
+				</div>
+
+				<div class="form">
+					<button type="submit">Add</button>
+				</div>
+			</form>
+
+			<!-- Form to delete a Book -->
+			<h3>Delete book</h3>
+			<form id="deleteBook">
+				<div class="form">
+					<label for="id">Id : </label>
+					<input type="number" name="id" id="bookId" min=1 required>
+				</div>
+				
+				<button type="submit">Delete</button>
+			</form>
+
+			<!-- Form to delete a DVD -->
+			<h3>Delete DVD</h3>
+			<form id="deleteDVD">
+				<div class="form">
+					<label for="id">Id : </label>
+					<input type="number" name="id" id="DVDId" min=1 required>
+				</div>
+				
+				<button type="submit">Delete</button>
+			</form>
+
+			<!-- Form to delete a Magazine -->
+			<h3>Delete magazine</h3>
+			<form id="deleteMagazine">
+				<div class="form">
+					<label for="id">Id : </label>
+					<input type="number" name="id" id="magazineId" min=1 required>
+				</div>
+				
+				<button type="submit">Delete</button>
+			</form>
+
+			<!-- Display result -->
+			<div id="result"></div>
+		</div>		
+
+		<!-- Include JS scripts -->
+		<script src="../src/js/jquery.js"></script>
+		<script src="../src/js/autofillSelect.js" type="text/javascript"></script>
+		<script src="../src/js/addW.js" type="text/javascript"></script>
+
+	</body>
+</html>

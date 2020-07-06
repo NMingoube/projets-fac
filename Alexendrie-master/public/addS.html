@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<header>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" href="css/style.css" />
+	</header>
+
+	<body> 
+		<div id="titleDiv">
+			<!-- Clicable title to Index -->
+			<a href="index.html"><img src="./img/title.png" alt="Project Alexandrie"/></a>
+			<hr />
+		</div>
+
+		<!-- Acces menu to all pages -->
+
+		<nav> 
+			<ul>
+				<li> 
+					<a href="searchW.html">Work search</a> 
+				</li>
+				<li>
+					<a href="panel.html">Panel</a>
+				</li>
+			</ul>
+		</nav>
+
+		<br />
+		<hr />
+		<br />
+		
+		<div id="bodyDiv">
+			<h2 class="formName">Add Subscriber</h2>
+			<!-- Form to insert a new subscriber -->
+			<form method="POST" id="addSubscriber">
+
+				<div class="form">
+					<label for="firstname">First Name : </label>
+					<input type="text" name="firstname" id="firstname" pattern="[a-zA-Z -]*" required>
+				</div>
+				
+				<div class="form">
+					<label for="lastname">Last Name : </label>
+					<input type="text" name="lastname" id="lastname" pattern="[a-zA-Z -]*" required>
+				</div>
+				
+				<div class="form">
+					<label for="birthday">Date of Birth : </label>
+					<input type="date" name="birthday" id="birthday" min="1900-01-01" required>
+				</div>
+				
+				<div class="form">
+					<label for="email">E-mail adress : </label>
+					<input type="email" name="email" id="email" required>
+				</div>
+
+				<div class="form">
+					<label for="address">Street : </label>
+					<input type="text" name="street" id="street" pattern="[0-9a-zA-Z -]*" required>
+				</div>
+
+				<div class="form">
+					<label for="address">City : </label>
+					<input type="text" name="city" id="city" pattern="[a-zA-Z -]*" required>
+				</div>
+
+				<div class="form">
+					<label for="address">Postal Code : </label>
+					<input type="text" name="postalCode" id="postalCode" pattern="[0-9]{5}" required>
+				</div>
+
+				<div class="form">
+					<label for="rightLevel">Right Level : </label>
+					<select name="rightLevel" id="rightLevel" required>
+						<option value="1">Level 1</option>
+						<option value="2">Level 2</option>
+						<option value="3">Level 3</option>
+					</select>
+				</div>
+				
+				<div class="form">
+					<label for="passW">PassWord (4 to 16 charaters) : </label>
+					<input type="password" name="password" id="password" minlength="4" maxlength="16" required>
+				</div>
+				
+				<div class="form">
+					<button type="submit">Add</button>
+				</div>
+			</form>
+
+			<!-- Form to delete a Subscriber -->
+			<h3>Delete subscriber</h3>
+			<form id="deleteSubscriber">
+				<div class="form">
+					<label for="id">Id : </label>
+					<input type="number" name="id" id="subscriberId" required>
+				</div>
+				
+				<button type="submit">Delete</button>
+			</form>
+
+			<!-- Display result -->
+			<div id="result"></div>
+		</div>
+
+		<!-- Include js sripts -->
+		<script src="../src/js/jquery.js"></script>
+		<script src="../src/js/autofillSelect.js" type="text/javascript"></script>
+		<script src="../src/js/sha256.js"></script>
+		<script src="../src/js/addS.js" type="text/javascript"></script>
+	</body>
+</html>

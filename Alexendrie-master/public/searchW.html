@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<header>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" href="css/style.css" />
+	</header>
+
+	<body>
+		<div id="titleDiv">
+			<!-- Clicable title to Index -->
+			<a href="index.html"><img src="./img/title.png" alt="Project Alexandrie"/></a>
+			<hr />
+		</div>
+
+		<!-- Acces menu to all pages -->
+
+		<nav> 
+			<ul>
+				<li> 
+					<a href="searchW.html">Work search</a> 
+				</li>
+				<li>
+					<a href="panel.html">Panel</a>
+				</li>
+			</ul>
+		</nav>
+
+		<div id="bodyDiv">
+			<h2 id="pageName">Search Work</h2>
+
+			<!-- Form to search a DVD -->
+			<h3>Search DVD</h3>			
+			<form method="POST" id="searchDVD">
+
+				<div class="form">
+					<label for="title">Title : </label>
+					<input type="text" name="title" id="dvdTitle" pattern="[0-9a-zA-Z -]*">
+				</div>				
+
+				<div class="form">
+					<label for="director">Director : </label>
+					<input type="text" name="director" id="dvdDirector" pattern="[a-zA-Z -]*" >
+				</div>
+
+				<div class="form">
+					<label for="age">Age : </label>
+					<input type="number" name="age" id="dvdAge" min=3>
+				</div>
+
+				<div class="form">
+					<label for="type">Choose a type : </label>
+					<select name="type" id="dvdType">
+						<option value=""></option>
+					</select>
+				</div>
+
+				<div class="form">
+					<label for="publish">Publish date : </label>
+					<input type="date" name="publish" id="dvdPublish" >
+				</div>
+
+				<div class="form">
+					<button type="submit">Search</button>
+				</div>
+
+			</form>
+			
+			<!-- Form to search a Book -->
+			<h3>Search Book</h3>
+			
+			<form method="POST" id="searchBook">
+
+				<div class="form">
+					<label for="isbn">ISBN : </label>
+					<input type="text" name="isbn" id="bookIsbn" pattern="[0-9]*" >
+				</div>				
+
+				<div class="form">
+					<label for="title">Title : </label>
+					<input type="text" name="title" id="bookTitle" pattern="[0-9a-zA-Z -]*" >
+				</div>
+				
+				<div class="form">
+					<label for="age">Age : </label>
+					<input type="number" name="age" id="bookAge" min=3>
+				</div>
+
+				<div class="form">
+					<label for="type">Choose a type : </label>
+					<select name="type" id="bookType">				
+							<option value=""></option>
+					</select>
+				</div>
+
+				<div class="form">
+					<label for="author">Author : </label>
+					<input type="text" name="author" id="bookAuthor" pattern="[a-zA-Z -]*" >
+				</div>
+
+				<div class="form">
+					<label for="editor">Editor : </label>
+					<input type="text" name="editor" id="bookEditor" pattern="[a-zA-Z -]*" >
+				</div>
+
+				<div class="form">
+					<label for="publish">Publish date : </label>
+					<input type="date" name="publish" id="bookPublish" >
+				</div>
+
+				<div class="form">
+					<button type="submit">Search</button>
+				</div>
+			</form>
+
+			<!-- Form to search a Magazine -->
+			<h3>Search Magazine</h3>
+			
+			<form method="POST" id="searchMagazine">			
+
+				<div class="form">
+					<label for="title">Title : </label>
+					<input type="text" name="title" id="magazineTitle" pattern="[0-9a-zA-Z -]*" >
+				</div>
+
+				<div class="form">
+					<label for="number">Number : </label>
+					<input type="number" name="number" id="magazineNumber" min=1 >
+				</div>
+				
+				<div class="form">
+					<label for="age">Age : </label>
+					<input type="number" name="age" id="magazineAge" min=3 >
+				</div>
+
+				<div class="form">
+					<label for="type">Choose a type : </label>
+					<select name="type" id="magazineType">						
+							<option value=""></option>
+					</select>
+				</div>
+
+				<div class="form">
+					<label for="editor">Editor : </label>
+					<input type="text" name="editor" id="magazineEditor" pattern="[a-zA-Z -]*" >
+				</div>
+
+				<div class="form">
+					<label for="publish">Publish date : </label>
+					<input type="date" name="publish" id="magazinePublish" >
+				</div>
+
+				<div class="form">
+					<label for="frequency">Choose a frequency : </label>
+					<select name="frequency" id="magazineFrequency">
+						<option value=""></option>
+					</select>
+				</div>
+
+				<div class="form">
+					<button type="submit">Search</button>
+				</div>
+			</form>
+			
+			<!-- Display result -->
+			<div id="subList"></div>
+
+		</div>
+
+		<!-- Include JS scripts -->
+		<script src="../src/js/jquery.js" type="text/javascript"></script>
+		<script src="../src/js/autofillSelect.js" type="text/javascript"></script>
+		<script src="../src/js/searchW.js" type="text/javascript"></script>
+	</body>
+</html>

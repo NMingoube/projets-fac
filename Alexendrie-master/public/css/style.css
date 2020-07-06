@@ -1,0 +1,92 @@
+@font-face{
+	font-family: "Questa";
+	src: url(../font/Questa.woff);
+}
+
+
+
+body{
+	background-color: #AC8143;
+	background-image: url(../img/background.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	color: white;
+	font-family: "Questa","Times New Roman";
+}
+
+#titleDiv{
+	text-align: center;
+	font-size: 3em;
+	color: black;
+}
+
+#bodyDiv{
+	background-color: rgba(0,0,0,0.7);
+	margin-left: 6em;
+	margin-right: 6em;
+	margin-top: 2em;
+	padding: 2em;
+}
+
+#bodyDiv p{
+	font-size: 1.2em;
+}
+
+ul{
+	list-style: none;
+}
+
+nav{
+	background-color: rgba(0,0,0,0.7);
+	margin-left: 6em;
+	margin-right: 6em;
+}
+
+nav ul{
+	list-style: none;
+	display: flex;
+	justify-content: space-around;
+}
+
+a{
+	color: white;
+	font-size:1.5em;
+	text-decoration: none
+}
+
+a:visited{
+	color:white;
+}
+
+a:active{
+	color:white;
+}
+
+form{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+form input{
+	margin-right: 0.5em;
+	margin-left: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+#subList{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: space-around;
+}
+
+div > table {
+	border: 1px solid white;
+}
+
+td.label {
+	text-decoration: underline;
+}
